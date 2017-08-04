@@ -1,29 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<center>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h1>All the undertales</h1>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= image_tag post.image(:large) %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h3><%= link_to 'New Post', new_post_path %></h3>
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <h2><%= link_to post.title, post %></h2>
+      <%= link_to post do %>
+        <%= image_tag post.image(:large) if post.image? %>
+      <% end %>
+      <h3>Posted by <%= link_to post.user.display_name, post.user %></h3>
+      <br>
+    </div>
+  <% end %>
+</center>

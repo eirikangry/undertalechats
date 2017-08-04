@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :posts
+  
   devise_for :users
-  root 'pages#home'
+  root 'posts#index'
+  
+  resources :posts do
+   resources :comments
+  end
+  
+  resources :users, only: [:show]
 end

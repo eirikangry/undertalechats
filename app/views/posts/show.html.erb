@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<center>
+<div>
+  <h3><%= @post.title %></h3>
+  <%= image_tag @post.image(:original) if @post.image? %>
+   <h3>Posted by <%= @post.user.display_name %></h3>
+  
+  <%= link_to 'Post New Comment', new_post_comment_path(@post) %>
+  <% @comments.each do |comment| %>
+    <h4><%= comment.body %> posted by <%= comment.user.display_name %></h4>
+  <% end %>
+</div>
+</center>
 
-<p>
-  <strong>User:</strong>
-  <%= @post.user %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

@@ -1,0 +1,18 @@
+<center>
+    <h1><%= @user.display_name %></h1>
+    
+    <%= image_tag @user.gravatar_url %>
+    
+    <h1>My chats</h1>
+    
+    <% @posts.each do |post| %>
+    <div class="post">
+      <h2><%= link_to post.title, post %></h2>
+      <%= link_to post do %>
+        <%= image_tag post.image(:large) if post.image? %>
+      <% end %>
+      <h3>Posted by <%= post.user.display_name %></h3>
+      <br>
+    </div>
+    <% end %>
+</center>

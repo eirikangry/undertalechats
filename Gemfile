@@ -21,6 +21,8 @@ gem 'figaro'
 gem 'paperclip'
 gem 'aws-sdk', '~> 2.3'
 
+gem 'gravtastic'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

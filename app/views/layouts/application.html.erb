@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Undertalechats</title>
+    <title>Undertale chats</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,11 +9,15 @@
   </head>
 
   <body>
-    <div>
+    <center><h1>Undertale Chats</h1></h1></center>
+    <div class="menu">
       <ul>
         <li><%= link_to 'Posts', posts_path %></li>
+        <li><%= link_to 'New Post', new_post_path %></li>
         <% if user_signed_in? %>
-          <li><%= current_user.email %></li>
+          <li>Welcome, <%= current_user.display_name %>!</li>
+          <li><%= link_to 'View Profile', current_user %></li>
+          <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
         <% else %>
           <li><%= link_to "Register", new_user_registration_path %></li>
           <li><%= link_to "Log In", new_user_session_path %></li>

@@ -13,3 +13,81 @@
  *= require_tree .
  *= require_self
  */
+ 
+ body {
+     color: #fff;
+     font-size: 20px;
+     background-image: url("trump-bg.jpg");
+     background-size: cover;
+     height: 100vh;
+     background-color: #000;
+ }
+ 
+ a {
+     color: #fff;
+ }
+ 
+.menu {
+    padding: 20px 0;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+
+.menu ul li {
+    display: inline;
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+.menu ul li a{
+    color: #000;
+}
+
+.post {
+    margin: 60px 0;
+    max-width: 500px;
+    color: #fff;
+}
+
+.post img {
+    border: 5px #86181e solid;
+}
+
+.post a {
+    color: #fff;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    font-size: 30px;
+    max-width: 300px;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=text] {
+    font-size: 30px;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+textarea { font-size: 25px; }
