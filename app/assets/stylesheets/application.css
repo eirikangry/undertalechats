@@ -15,7 +15,7 @@
  */
  
  body {
-     color: #fff;
+     color: #0d09ea;
      font-size: 20px;
      background-image: url("trump-bg.jpg");
      background-size: cover;
@@ -24,12 +24,12 @@
  }
  
  a {
-     color: #fff;
+     color: #0d09ea;
  }
  
 .menu {
     padding: 20px 0;
-    color: #000;
+    color: #0d09ea;
     background-color: #fff;
     text-align: center;
     font-weight: 700;
@@ -48,7 +48,7 @@
 .post {
     margin: 60px 0;
     max-width: 500px;
-    color: #fff;
+    color: #0d09ea;
 }
 
 .post img {
@@ -56,7 +56,7 @@
 }
 
 .post a {
-    color: #fff;
+    color: #0d09ea;
 }
 
 input[type=text], select {
@@ -74,7 +74,7 @@ input[type=submit] {
     max-width: 300px;
     width: 100%;
     background-color: #4CAF50;
-    color: white;
+    color: blue;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
