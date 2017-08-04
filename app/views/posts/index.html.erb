@@ -13,6 +13,13 @@
         <%= image_tag post.image(:large) if post.image? %>
       <% end %>
       <h3>Posted by <%= link_to post.user.display_name, post.user %></h3>
+      <% if user_signed_in? %>
+          <% if current_user.admin? %>
+          <br>
+              <%= link_to 'Edit', edit_post_path(post) %><br>
+              <%= link_to 'Destroy', post, method: :delete, data: { confirm: "Are you sure?" } %>
+          <% end %>
+      <% end %>
       <br>
     </div>
   <% end %>
